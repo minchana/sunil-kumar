@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+
+  get 'projects/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   get "/user/new" => "users#new", as: :user_new
@@ -8,6 +12,10 @@ Rails.application.routes.draw do
   put  "/user/:id/edit"=> "users#update", as: :user_update
   delete "/user/:id"  =>"users#destroy", as: :user_destroy
   get  "/user/:id/show" =>"users#show", as: :user_show
+
+  get "/project/new" => "projects#new", as: :project_new
+  post '/project/new'=>"projects#create", as: :project_create
+  get  "/projects/index"=> "projects#index", as: :projects_list
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

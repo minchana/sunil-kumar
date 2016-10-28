@@ -1,16 +1,11 @@
-<table border="2">
-<tr>
- <th>firstname </th>
- <th>lastname</th>
- <th> email</th>
- 
- </tr>
- 
- <tr>
- 
-<td><%= @user.firstname %></td>
-<td><%= @user.lastname %></td>
-<td><%= @user.email %></td>
-</tr>
 
-</table>
+ 
+ <h1>profile details</h1>
+ 
+<%= @user.firstname %><br>
+<%= @user.lastname %><br>
+<%= @user.email %><br>
+
+<%= link_to 'edit', user_edit_path %>
+<%= link_to 'update', user_update_path %>
+

@@ -3,7 +3,6 @@
  <th>firstname </th>
  <th>lastname</th>
  <th> email</th>
- <th>password</th>
  
  </tr>
  <% @user.each do |b|%>
@@ -12,8 +11,9 @@
 <td><%= b.firstname %></td>
 <td><%= b.lastname %></td>
 <td><%= b.email %></td>
-<td><% b.password%></td>
-<td><%= link_to 'edit', user_edit_path(b) %></td>
+
+
+<td><%= link_to 'show profile', user_show_path(b) %></td>
 <td><%= link_to 'destroy', user_destroy_path(b), method: :delete,
 data: {
 confirm: 'Are you sure?'
